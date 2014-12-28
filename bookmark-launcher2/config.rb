@@ -71,7 +71,7 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 
   # for GitHub Pages
-  activate :asset_host, :host => "/middleman-test"
+  activate :asset_host, :host => "/bookmark-launcher2"
 end
 
 # Deploy to GitHub Pages
