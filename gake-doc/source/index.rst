@@ -3,20 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Gake's documentation!
-================================
+Gake
+====
 
-Contents:
+A `GNU Make <https://www.gnu.org/software/make/>`_ alternative by golang.
 
-.. toctree::
-   :maxdepth: 2
+https://github.com/key-amb/gake
 
+About This Document
+-------------------
 
+This document specifies the tool's behavior.
 
-Indices and tables
-==================
+Gakefile
+--------
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+**Gakefile** is a text file in which building tasks are described like *Makefile* in GNU Make.
 
