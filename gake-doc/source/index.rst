@@ -20,3 +20,8 @@ Gakefile
 
 **Gakefile** is a text file in which building tasks are described like *Makefile* in GNU Make.
 
+A simplest Gakefile looks like this::
+
+    task myTask {
+        print "Hello, world!"
+    }
