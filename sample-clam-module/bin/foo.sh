@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+#lib_dir=$(pwd ${BASH_SOURCE##*/})/lib
+#. ${lib_dir}/foo.shrc
+
 foo
 
 exit

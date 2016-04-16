@@ -1,5 +1,5 @@
-#!bash
-
 foo() {
-  echo foo
+  echo "foo"
 }
+
+var="Foo"
