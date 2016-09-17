@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -euo pipefail
 
-#lib_dir=$(pwd ${BASH_SOURCE##*/})/lib
-#. ${lib_dir}/foo.shrc
+eval $(cload -)
+cllib 'foo'
 
 foo
 
@@ -27,10 +27,9 @@ blah blah blah.
 
 =head1 AUTHORS
 
-YASUTAKE Kiyoshi E<lt>yasutake.kiyoshi@gmail.comE<gt>
+IKEDA Kiyoshi E<lt>yasutake.kiyoshi@gmail.comE<gt>
 
 =cut
 
 __EOF__
-
 

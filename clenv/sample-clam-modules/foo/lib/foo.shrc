@@ -1,5 +1,5 @@
-foo() {
-  echo "foo"
-}
+cllib 'foo/bar'
 
-var="Foo"
+foo() {
+  foobar
+}
