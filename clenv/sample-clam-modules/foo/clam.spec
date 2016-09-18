@@ -1,4 +1,5 @@
-name=sample
+name=sample-foo
 version=0.2
-executables=bin/*
-resources=lib/*
+executables=bin/foo.sh
+#librarypath=lib
+libraries="lib/foo.shrc lib/foo"
