@@ -1,7 +1,7 @@
 # Load DSL and set up stages
 require "capistrano/setup"
 
-import File.expand_path('../lib/capistrano/tasks/workflow.rake', __FILE__)
+#import File.expand_path('../lib/capistrano/tasks/workflow.rake', __FILE__)
 # Include default deployment tasks
 require "capistrano/deploy"
 
