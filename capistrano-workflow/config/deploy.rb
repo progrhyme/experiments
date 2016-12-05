@@ -10,6 +10,10 @@ set :repo_url, 'git@github.com:key-amb/shove.git'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "#{ENV['HOME']}/tmp/cap/shove"
 
+before 'deploy:starting', 'workflow:start'
+before 'deploy:updating', 'workflow:update'
+before 'deploy:reverting', 'workflow:revert'
+
 # Default value for :scm is :git
 # set :scm, :git
 
