@@ -10,14 +10,23 @@ set :repo_url, 'git@github.com:key-amb/shove.git'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "#{ENV['HOME']}/tmp/cap/shove"
 
-deploy = Rake.application.lookup('deploy')
-deploy.clear
-deploy.clear_comments
+# deploy = Rake.application.lookup('deploy')
+# deploy.clear
+# deploy.clear_comments
 
-desc 'Overrided deploy task'
-task :deploy do
-  p 'deploy overrided!'
+namespace :deploy do
+  task :cleanup do
+    run_locally do
+      execute :echo, 'cleanup is called'
+    end
+  end
+
+  task :fail do
+    raise
+  end
 end
+after 'deploy:updating', 'deploy:fail'
+after 'deploy:failed', 'deploy:cleanup'
 
 # Default value for :scm is :git
 # set :scm, :git
