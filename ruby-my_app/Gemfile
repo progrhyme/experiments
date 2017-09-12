@@ -3,3 +3,6 @@ source 'https://rubygems.org'
 gem 'rake'
 gem 'rspec'
 gem 'database_rewinder'
+
+# NOTE: Workaround to avoid load error of 'database_rewinder'
+gem 'rails'
