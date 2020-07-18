@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
-# # help.sh
+# help.sh
+# =======
 #
 # Demo script to show help by shell function using AWK.
 #
@@ -11,28 +12,14 @@
 
 set -euo pipefail
 
+# Function help() shows help
 help() {
-  awk 'BEGIN { st = 0 } {
-    if (st == 0 && $0 ~ /^#[^!]*$/) {
-      # Start to show help
-      st = 1
-      if ($0 !~ /^#$/) {
-        sub("^# ", "", $0)
-        print $0
-      }
-    } else if (st == 1) {
-      if ($0 ~ /^#/) {
-        sub("^# ?", "", $0)
-        print $0
-      } else {
-        # End to show help
-        st = 2
-      }
-    }
-  } ' $0
+  awk 'NR > 2 {
+    if (/^#/) { sub("^# ?", ""); print }
+    else { exit }
+  }' $0
 }
 
 help
 
 exit
-
