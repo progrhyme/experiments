@@ -15,8 +15,8 @@ set -euo pipefail
 # Function help() shows help
 help() {
   awk 'NR > 2 {
-    if (/^#/) { sub("^# ?", ""); print }
-    else { exit }
+    if (sub("^# ?", "")) print
+    else exit
   }' $0
 }
 
