@@ -14,10 +14,9 @@ set -euo pipefail
 
 # Function help() shows help
 help() {
-  awk 'NR > 2 {
-    if (sub("^# ?", "")) print
-    else exit
-  }' $0
+  # Skipping top 2 lines, to first blank line
+  # Prints lines matching /^#/ omitting preceding "^# ?"
+  awk 'NR==3,/^$/{if (sub("^# ?", "")) print}' $0
 }
 
 help
